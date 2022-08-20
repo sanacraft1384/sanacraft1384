@@ -1,4 +1,4 @@
-name: sanacraft1384
+name: sana1
 on: workflow_dispatch
 
 jobs:
@@ -24,7 +24,7 @@ jobs:
     - name: Connect Ke Akun Ngrok.
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
       env:
-        NGROK_AUTH_TOKEN: ${{ 1xx34lL3zeTQAy1igVRBM502emt_5dHw2UwHV4EWKW5BFB2Re }}
+        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
     - name: Mengaktifkan Akses RDP.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
